@@ -13,6 +13,7 @@ class PdfEncode extends FPDF{
    {
             $body = file_get_contents('php://input');
             $data = json_decode($body)->{'data'};
+	   $noOfElements = json_decode($body)->{'array_length'};
 
             $this->Image('R.jpg',10,10,30,10);
 
@@ -44,8 +45,8 @@ class PdfEncode extends FPDF{
             $this->SetTextColor(0, 0, 0);
 
             $this->SetFont('Arial','B',7);
-	    $arr_length = count($data->Survey);
-            for($i = 0; $i < $arr_length; $i++)
+
+            for($i = 0; $i < $noOfElements; $i++)
             { 
 	   
 //             $this->SetX($x);

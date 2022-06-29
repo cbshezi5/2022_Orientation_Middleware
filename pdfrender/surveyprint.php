@@ -5,7 +5,6 @@ header('Access-Control-Allow-Headers: *');
 
 
 
-
 class PdfEncode extends FPDF{
     
   

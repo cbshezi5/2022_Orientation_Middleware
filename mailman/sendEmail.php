@@ -4,17 +4,16 @@ header('Access-Control-Allow-Headers: *');
 
 
 require_once ('PHPMailerAutoload.php');
-    function sendOTP($emailUser,$severEmail,$password,$subject,$body)
+    function sendOTP($emailUser,$subject,$body)
     {
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->SMTPAuth = false;
-     
+        $mail->SMTPAuth = true;
         $mail->Host = 'smtp.office365.com';
         $mail->Port = '587';
         $mail->isHTML();
-        $mail->Username = $severEmail;
-        $mail->Password = $password;
+        $mail->Username = "217070554@tut4life.ac.za";
+        $mail->Password = "Tut@2017";
         $mail->SetFrom("217070554@tut4life.ac.za");
         $mail->Subject = $subject;
         $mail->addEmbeddedImage('R.jpg', 'tutSubLogo');
@@ -27,10 +26,13 @@ require_once ('PHPMailerAutoload.php');
         <br>
         <br>
         <img src="cid:tutSubLogo">';
-        
- 
-	    $mail->AddAddress($emailUser);
-        $mail->Send();
+	$mail->AddAddress($emailUser);
+        if(!$mail->send()) {
+    		echo 'Message could not be sent.';
+    		echo 'Mailer Error: ' . $mail->ErrorInfo;
+	} else {
+    		echo 'Message has been sent';
+	}
     }
 
 
@@ -42,6 +44,6 @@ require_once ('PHPMailerAutoload.php');
 
      $emailBody ="From Tshwane University of Technology This email is for verifying the email from the orientation system your one time pin is <br> <label style='color:blue;font-size:60px'>${otp}</label> "; 
      $emailTittle = "Tut Orientation OTP ";
-    sendOTP($email,"217070554@tut4life.ac.za","Tut@2017",$emailTittle,$emailBody);
+    sendOTP($email,$emailTittle,$emailBody);
     
 ?>

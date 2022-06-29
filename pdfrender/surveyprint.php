@@ -13,7 +13,7 @@ class PdfEncode extends FPDF{
    {
             $body = file_get_contents('php://input');
             $data = json_decode($body)->{'data'};
-	   $noOfElements = 70
+	   $noOfElements = 70;
             $this->Image('R.jpg',10,10,30,10);
 
             $this->SetFont('Courier','B',16);

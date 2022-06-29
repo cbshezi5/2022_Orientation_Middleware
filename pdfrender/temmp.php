@@ -28,7 +28,7 @@ class PdfEncode extends FPDF{
 $printOut = new PdfEncode();
 $printOut->AliasNbPages();
 $printOut->AddPage('L','A4',0);
-$printOut->Output("D","OfficeForm.pdf");
+$printOut->Output("D","Certificate.pdf");
 //http://localhost/pdfrender/temmp.php
 
 

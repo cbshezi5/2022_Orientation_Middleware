@@ -10,8 +10,8 @@ require_once ('PHPMailerAutoload.php');
         $mail->isSMTP();
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'ssl';
-        $mail->Host = 'smtp.gmail.com';
-        $mail->Port = '465';
+        $mail->Host = 'smtp.office365.com';
+        $mail->Port = '587';
         $mail->isHTML();
         $mail->Username = $severEmail;
         $mail->Password = $password;
@@ -42,6 +42,6 @@ require_once ('PHPMailerAutoload.php');
 
      $emailBody ="From Tshwane University of Technology This email is for verifying the email from the orientation system your one time pin is <br> <label style='color:blue;font-size:60px'>${otp}</label> "; 
      $emailTittle = "Tut Orientation OTP ";
-    sendOTP($email,"no.reply.k9nine@gmail.com","Tut@2017",$emailTittle,$emailBody);
+    sendOTP($email,"217070554@tut4life.ac.za","Tut@2017",$emailTittle,$emailBody);
     
 ?>

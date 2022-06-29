@@ -10,7 +10,7 @@ class PdfEncode extends FPDF{
   
    function header()
    {
-//             $body = file_get_contents('php://input');
+            $body = file_get_contents('php://input');
 //             $data = json_decode($body)->{'data'};
 
             $this->Image('R.jpg',10,10,30,10);

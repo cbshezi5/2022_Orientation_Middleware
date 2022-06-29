@@ -27,7 +27,7 @@ class PdfEncode extends FPDF{
         
             $this->Ln(30);
 
-//             $this->Cell(0,0,"Hi admin your requested survey report for student ".$data->Firstname." ".$data->Lastname ,2,0,'C');
+            $this->Cell(0,0,"Hi admin your requested survey report for student ".$data->Firstname." ".$data->Lastname ,2,0,'C');
 //             $this->Ln(6);
 //             $this->Cell(0,0,$data->Email.", ".$data->StudentNo. " replied as follows on the survey stage of the online orintation" ,2,0,'C');
 //             $this->SetFont('Arial','B',13);

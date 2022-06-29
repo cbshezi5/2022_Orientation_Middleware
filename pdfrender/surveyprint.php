@@ -45,14 +45,14 @@ class PdfEncode extends FPDF{
 
             $this->SetFont('Arial','B',7);
 
-//             for($i = 0; $i < $noOfElements; $i++)
-//             { 
+            for($i = 0; $i < $noOfElements; $i++)
+            { 
 	   
-// //             $this->SetX($x);
-//                $this->Cell(180,6,$data->Survey[$i]->question, 1,0);
+//             $this->SetX($x);
+               $this->Cell(180,6,$data->Survey[$i]->question, 1,0);
             
-//                $this->Cell(90,6,$data->Survey[$i]->answer, 1,1);
-//             }
+               $this->Cell(90,6,$data->Survey[$i]->answer, 1,1);
+            }
 
         
 

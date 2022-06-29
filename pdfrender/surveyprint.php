@@ -65,7 +65,7 @@ class PdfEncode extends FPDF{
 $printOut = new PdfEncode();
 $printOut->AliasNbPages();
 $printOut->AddPage('L','A4',0);
-$printOut->Output("D","survey-report.pdf");
+$printOut->Output("I","survey-report.pdf");
 
 
 

@@ -8,8 +8,8 @@ require_once ('PHPMailerAutoload.php');
     {
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->SMTPAuth = true;
-        $mail->SMTPSecure = 'ssl';
+        $mail->SMTPAuth = false;
+     
         $mail->Host = 'smtp.office365.com';
         $mail->Port = '587';
         $mail->isHTML();

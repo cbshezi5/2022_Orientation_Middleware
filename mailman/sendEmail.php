@@ -15,7 +15,7 @@ require_once ('PHPMailerAutoload.php');
         $mail->isHTML();
         $mail->Username = $severEmail;
         $mail->Password = $password;
-        $mail->SetFrom('no-reply@knine');
+        $mail->SetFrom("217070554@tut4life.ac.za");
         $mail->Subject = $subject;
         $mail->addEmbeddedImage('R.jpg', 'tutSubLogo');
         $mail->Body = '

@@ -27,11 +27,14 @@ require_once ('PHPMailerAutoload.php');
         <br>
         <img src="cid:tutSubLogo">';
 	$mail->AddAddress($emailUser);
+	    
+	
         if(!$mail->send()) {
-    		echo 'Message could not be sent.';
-    		echo 'Mailer Error: ' . $mail->ErrorInfo;
+		$json_obj = '{"message": "Message could not be sent.","error": "eor"}';
+		echo json_encode($json_obj);
 	} else {
-    		echo 'Message has been sent';
+		$json_obj = '{"message": "Message has been sent","error": "noerr"}';
+		echo json_encode($json_obj);
 	}
     }
 
